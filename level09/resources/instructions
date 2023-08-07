@@ -1,0 +1,28 @@
+~$ ll
+-> [...]
+   -rwsr-sr-x 1 flag09  level09 7640 Mar  5  2016 level09*
+   ----r--r-- 1 flag09  level09   26 Mar  5  2016 token
+   [...]
+
+~$ ./level09
+-> You need to provied only one arg.
+~$ ./level09 token
+-> tpmhr
+
+~$ ./level09 000000000
+-> 012345678
+
+Algo: token.charAt(i) + i;
+
+~$ ltrace ./level09 token
+-> puts("You should not reverse this"You should not reverse this
+
+So we can reverse it and it will be: token.charAt(i) - i;
+
+/tmp$ gcc main.c
+/tmp$ ./a.out $(cat ~/token)
+-> f3iji1ju5yuevaus41q1afiuq
+
+Password: f3iji1ju5yuevaus41q1afiuq
+
+Voila!

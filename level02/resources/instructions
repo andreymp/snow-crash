@@ -1,0 +1,36 @@
+~$ ll
+-> [...]
+   ----r--r-- 1 flag02  level02 8302 Aug 30  2015 level02.pcap
+   [...]
+
+~$ scp -P 4242 level02@192.168.1.64:~/level02.pcap  .
+~$ chmod +x level02.pcap
+
+Let's use Wreshark service to read it.
+On line 43 we see '...Pas word:', let's go next 
+45: f
+47: t
+49: _
+51: w
+53: a
+55: n
+57: d
+59: r
+61: .
+63: .
+65: .
+67: N
+69: D
+71: R
+73: e
+75: l
+77: .
+79: L
+81: 0
+83: L
+
+61-63, 77 is Hex 7f -> DEL, so the password will not be ft_wandr...NDRel.L0L
+
+Password: ft_waNDReL0L
+
+Voila!

